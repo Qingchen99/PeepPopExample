@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1PV-Xg-tKa">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
+    </dependencies>
+    <scenes>
+        <!--3D Touch 示例-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PeekPopExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6g-uL-3dX">
+                                <rect key="frame" x="263" y="285" width="75" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Ray 的博客"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SqM-kp-gv6">
+                                <rect key="frame" x="255" y="386" width="90" height="30"/>
+                                <animations/>
+                                <state key="normal" title="自定义的视图"/>
+                                <connections>
+                                    <segue destination="90n-Vs-iPf" kind="show" id="hBn-te-Qvg">
+                                        <segue key="commit" destination="90n-Vs-iPf" kind="show" id="BPB-zX-lhS"/>
+                                        <segue key="preview" inheritsFrom="commit" id="3dr-pX-qJg"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S6g-uL-3dX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4r8-Oe-H1k"/>
+                            <constraint firstItem="S6g-uL-3dX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6LK-n3-VJ6"/>
+                            <constraint firstItem="SqM-kp-gv6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="322" id="Bh8-CU-Yqb"/>
+                            <constraint firstItem="SqM-kp-gv6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bFm-0j-RLX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="3D Touch 示例" id="ZC1-Q5-PtH"/>
+                    <connections>
+                        <outlet property="peekButton" destination="S6g-uL-3dX" id="KNi-Qj-P4I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1190" y="427"/>
+        </scene>
+        <!--自定义-->
+        <scene sceneID="wGO-0w-Pqm">
+            <objects>
+                <viewController id="90n-Vs-iPf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VsK-kw-4jn"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Zj-fS-x4A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xYg-Tt-WJx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ray" translatesAutoresizingMaskIntoConstraints="NO" id="qHH-gF-3ye">
+                                <rect key="frame" x="210" y="210" width="180" height="180"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qHH-gF-3ye" firstAttribute="centerY" secondItem="xYg-Tt-WJx" secondAttribute="centerY" id="O40-4I-Cx7"/>
+                            <constraint firstItem="qHH-gF-3ye" firstAttribute="centerX" secondItem="xYg-Tt-WJx" secondAttribute="centerX" id="YxO-NC-gVg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="自定义" id="amk-2V-jlc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tp0-Eq-vY1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1934" y="427"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1ga-9v-Ovc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1PV-Xg-tKa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tRy-zs-ArW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="x30-h9-owO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3bG-32-fyy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416" y="427"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ray" width="180" height="180"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hBn-te-Qvg"/>
+    </inferredMetricsTieBreakers>
+</document>
