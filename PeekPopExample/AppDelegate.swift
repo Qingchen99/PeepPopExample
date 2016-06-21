@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  PeekPopExample
 //
-//  Created by Ray on 15/11/21.
-//  Copyright © 2015年 Ray. All rights reserved.
+//  Created by Qingchen on 16/6/21.
+//  Copyright © 2016年 Qingchen. All rights reserved.
 //
 
 import UIKit

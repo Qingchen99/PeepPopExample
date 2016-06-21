@@ -2,8 +2,8 @@
 //  ViewController_ UIViewControllerPreviewingDelegate.swift
 //  PeekPopExample
 //
-//  Created by Ray on 15/11/21.
-//  Copyright © 2015年 Ray. All rights reserved.
+//  Created by Qingchen on 16/6/21.
+//  Copyright © 2016年 Qingchen. All rights reserved.
 //
 
 import UIKit
@@ -13,7 +13,7 @@ extension ViewController:UIViewControllerPreviewingDelegate {
     
     func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         
-        return CGRectContainsPoint(peekButton.frame, location) ? SFSafariViewController(URL: NSURL(string:"http://ray.dotnetage.com")!) : nil
+        return CGRectContainsPoint(peekButton.frame, location) ? SFSafariViewController(URL: NSURL(string:"http://www.baidu.com")!) : nil
     }
     
     func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
